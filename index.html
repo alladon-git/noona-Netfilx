@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieFlix - 현재 상영 중</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 네비게이션 -->
+  <nav id="navbar">
+    <a class="nav-logo" href="#">MOVIEFLIX</a>
+    <div class="nav-right">
+      <span id="movie-count"></span>
+    </div>
+  </nav>
+
+  <!-- 히어로 배너 -->
+  <div id="hero">
+    <div id="hero-backdrop"></div>
+    <div class="hero-content">
+      <div class="hero-title" id="hero-title">로딩 중...</div>
+      <div class="hero-meta" id="hero-meta"></div>
+      <div class="hero-overview" id="hero-overview"></div>
+      <div class="hero-buttons">
+        <button class="btn btn-play" id="hero-btn">▶ 상세 정보</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 영화 목록 -->
+  <div class="section">
+    <div class="section-title">🎬 현재 상영 중인 영화</div>
+    <div id="movie-grid" class="movie-row">
+      <div class="loading">
+        <div class="spinner"></div>
+        <span>영화 불러오는 중...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 영화 상세 모달 -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <img class="modal-backdrop" id="modal-backdrop-img" src="" alt="" />
+      <div class="modal-gradient">
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-meta" id="modal-meta"></div>
+        <div class="modal-overview" id="modal-overview"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
